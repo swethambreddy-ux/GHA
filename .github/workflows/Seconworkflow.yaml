@@ -1,12 +1,15 @@
-name: First_workflow
-on: workflow_dispatch
+name: Second_workflow
+on:
+    push:
+        branches: 
+            - main
 jobs:
     first_job:
         runs-on: ubuntu-latest
         steps:
             - name: first step
-              run: echo "This is first workflow"
+              run: echo "This is second workflow"
             - name: print good bye
               run: | 
-                   echo "This is one first workflow"
+                   echo "This is 2nd workflow"
                    echo "Good bye"
